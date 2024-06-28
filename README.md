@@ -1,11 +1,3 @@
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/hihone/go-wkhtmltopdf)](https://pkg.go.dev/github.com/hihone/go-wkhtmltopdf)
-[![Go Report Card](https://goreportcard.com/badge/SebastiaanKlippert/go-wkhtmltopdf)](https://goreportcard.com/report/SebastiaanKlippert/go-wkhtmltopdf)
-[![codebeat badge](https://codebeat.co/badges/a6bb7f66-7ae2-4de8-8b61-623ef68096c9)](https://codebeat.co/projects/github-com-sebastiaanklippert-go-wkhtmltopdf-master)
-[![codecov](https://codecov.io/gh/SebastiaanKlippert/go-wkhtmltopdf/branch/master/graph/badge.svg)](https://codecov.io/gh/SebastiaanKlippert/go-wkhtmltopdf)
-
-[![Build Status](https://github.com/hihone/go-wkhtmltopdf/actions/workflows/ubuntu.yml/badge.svg?branch=master)](https://github.com/hihone/go-wkhtmltopdf/actions/workflows/ubuntu.yml)
-[![Build Status](https://github.com/hihone/go-wkhtmltopdf/actions/workflows/macos.yml/badge.svg?branch=master)](https://github.com/hihone/go-wkhtmltopdf/actions/workflows/macos.yml)
-
 # go-wkhtmltopdf
 Golang commandline wrapper for wkhtmltopdf
 
@@ -83,10 +75,10 @@ func ExampleNewPDFGenerator() {
   // Set global options
   pdfg.Dpi.Set(300)
   pdfg.Orientation.Set(OrientationLandscape)
-  pdfg.Grayscale.Set(true)
+  //pdfg.Grayscale.Set(true)
 
   // Create a new input page from an URL
-  page := NewPage("https://godoc.org/github.com/hihone/go-wkhtmltopdf")
+  page := NewPage("https://www.google.com")
 
   // Set options for this page
   page.FooterRight.Set("[page]")
