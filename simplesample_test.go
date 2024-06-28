@@ -18,10 +18,10 @@ func ExampleNewPDFGenerator() {
 	// Set global options
 	pdfg.Dpi.Set(300)
 	pdfg.Orientation.Set(OrientationLandscape)
-	pdfg.Grayscale.Set(true)
+	//pdfg.Grayscale.Set(true)
 
 	// Create a new input page from an URL
-	page := NewPage("https://godoc.org/github.com/SebastiaanKlippert/go-wkhtmltopdf")
+	page := NewPage("https://www.google.com")
 
 	// Set options for this page
 	page.FooterRight.Set("[page]")
@@ -41,6 +41,7 @@ func ExampleNewPDFGenerator() {
 	err = pdfg.WriteFile("./simplesample.pdf")
 	if err != nil {
 		log.Fatal(err)
+		return
 	}
 
 	fmt.Println("Done")
